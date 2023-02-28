@@ -7,18 +7,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.swil.userservice.user.dto.UserDetailsDto;
-import com.swil.userservice.user.service.UserDetailsService;
+import com.swil.userservice.user.service.UserDetailService;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
     
     @Autowired
-    UserDetailsService userDetailsService;
+    UserDetailService userDetailsService;
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String saveUser(@RequestBody UserDetailsDto user){
         return userDetailsService.saveUser(user);
+    }
+
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    public String test(){
+        return "userDetailsService.saveUser(user)";
     }
 
 }
