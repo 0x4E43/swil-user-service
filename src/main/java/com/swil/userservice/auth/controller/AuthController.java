@@ -17,9 +17,19 @@ public class AuthController {
     @Autowired
     AuthService authService;
     
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String authControllerTest(){
-        return "Auth Controller from User Service";
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String home(){
+        return "Auth Controller from User Service | ADMIN";
+    }
+
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public String user(){
+        return "Auth Controller from User Service | NORMAL USER";
+    }
+
+    @RequestMapping(value = "/public", method = RequestMethod.GET)
+    public String publicuser(){
+        return "Auth Controller from User Service | PUBLIC USER";
     }
 
     
