@@ -49,10 +49,10 @@ public class UserInfoBean {
     private String resetKey;
 
     @Column(name = "is_deleted")
-    Boolean isDeleted;
+    Short isDeleted;
 
     @Column(name = "is_disabled")
-    Boolean isDisabled;
+    Short isDisabled;
 
     @Column(name = "last_login")
     private Date lastLogin;
@@ -157,19 +157,19 @@ public class UserInfoBean {
         this.resetKey = resetKey;
     }
 
-    public Boolean getIsDeleted() {
+    public Short getIsDeleted() {
         return isDeleted;
     }
 
-    public void setIsDeleted(Boolean isDeleted) {
+    public void setIsDeleted(Short isDeleted) {
         this.isDeleted = isDeleted;
     }
 
-    public Boolean getIsDisabled() {
+    public Short getIsDisabled() {
         return isDisabled;
     }
 
-    public void setIsDisabled(Boolean isDisabled) {
+    public void setIsDisabled(Short isDisabled) {
         this.isDisabled = isDisabled;
     }
 
