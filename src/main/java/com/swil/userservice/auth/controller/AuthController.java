@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.swil.userservice.auth.dto.UserAuthDto;
 import com.swil.userservice.auth.service.AuthService;
+import com.swil.userservice.user.dto.UserInfoDto;
 
 @RestController
 @RequestMapping("/auth")
@@ -36,6 +37,11 @@ public class AuthController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String authController(@RequestBody UserAuthDto dto){
         return authService.login(dto);
+    }
+
+    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    public String authController(@RequestBody UserInfoDto dto){
+        return authService.signup(dto);
     }
     
 }
