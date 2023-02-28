@@ -9,19 +9,19 @@ import com.swil.userservice.core.dto.Response;
 import com.swil.userservice.core.utils.UserLoginUtils;
 import com.swil.userservice.user.dao.UserDetailsDao;
 import com.swil.userservice.user.dto.UserDetailsDto;
-import com.swil.userservice.user.entity.UserDetailsBean;
+import com.swil.userservice.user.entity.UserDetailBean;
 
 @Service
-public class UserDetailsService {
+public class UserDetailService {
 
-    public static Logger logger = LoggerFactory.getLogger(UserDetailsService.class);
+    public static Logger logger = LoggerFactory.getLogger(UserDetailService.class);
 
     @Autowired
     UserDetailsDao userDetailsDao;
 
     public String saveUser(UserDetailsDto dto) {
         try {
-            UserDetailsBean bean = new UserDetailsBean();
+            UserDetailBean bean = new UserDetailBean();
             bean.setEmailId("talk2nimai@gmail.com");
             bean.setUsername("nimai.c");
             bean.setPassword("Nimai@123");

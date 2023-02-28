@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="swil_user_details")
-public class UserDetailsBean {
+public class UserDetailBean {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
