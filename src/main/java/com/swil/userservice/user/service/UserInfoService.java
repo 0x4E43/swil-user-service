@@ -7,21 +7,21 @@ import org.springframework.stereotype.Service;
 
 import com.swil.userservice.core.dto.Response;
 import com.swil.userservice.core.utils.UserLoginUtils;
-import com.swil.userservice.user.dao.UserDetailsDao;
-import com.swil.userservice.user.dto.UserDetailsDto;
-import com.swil.userservice.user.entity.UserDetailBean;
+import com.swil.userservice.user.dao.UserInfoDao;
+import com.swil.userservice.user.dto.UserInfoDto;
+import com.swil.userservice.user.entity.UserInfoBean;
 
 @Service
-public class UserDetailService {
+public class UserInfoService {
 
-    public static Logger logger = LoggerFactory.getLogger(UserDetailService.class);
+    public static Logger logger = LoggerFactory.getLogger(UserInfoService.class);
 
     @Autowired
-    UserDetailsDao userDetailsDao;
+    UserInfoDao userDetailsDao;
 
-    public String saveUser(UserDetailsDto dto) {
+    public String saveUser(UserInfoDto dto) {
         try {
-            UserDetailBean bean = new UserDetailBean();
+            UserInfoBean bean = new UserInfoBean();
             bean.setEmailId("talk2nimai@gmail.com");
             bean.setUsername("nimai.c");
             bean.setPassword("Nimai@123");

@@ -1,6 +1,6 @@
 package com.swil.userservice.user.dto;
 
-public class UserDetailsDto {
+public class UserInfoDto {
     private int id;
     private String UUID;
     private String username;
